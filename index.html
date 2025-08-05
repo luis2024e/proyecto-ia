@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafíos de Lógica Avanzados</title>
+    
+    <!-- Fuente profesional y legible: Manrope -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- Enlace a la hoja de estilos CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Laboratorio de Lógica</h1>
+        <p>Soluciones interactivas a problemas de programación clásicos.</p>
+    </header>
+
+    <main class="cards-container">
+        <!-- 🟦 Card 1: Números Primos (Ancho Completo) -->
+        <!-- CORRECCIÓN: Se ha añadido el id="card-primos" -->
+        <article class="card card-full-width" id="card-primos">
+            <div class="card-header">
+                <span class="card-icon">🧮</span>
+                <h2>Análisis de Números Primos</h2>
+            </div>
+            <p class="description">Encuentra todos los números primos dentro de un rango numérico especificado.</p>
+            <div class="card-body">
+                <div class="input-group">
+                    <input type="number" id="primos-desde" placeholder="Desde el número...">
+                    <input type="number" id="primos-hasta" placeholder="Hasta el número...">
+                </div>
+                <button class="action-btn" data-exercise="primos">Calcular Primos</button>
+                <div class="result-box" id="primos-resultado"></div>
+            </div>
+            <div class="card-footer">
+                <button class="solution-btn" data-exercise="primos">Ver Solución Detallada</button>
+            </div>
+        </article>
+
+        <!-- 🟨 Card 2: Serie Fibonacci (Ancho Medio) -->
+        <article class="card card-half-width" id="card-fibonacci">
+            <div class="card-header">
+                <span class="card-icon">🌀</span>
+                <h2>Generador Fibonacci</h2>
+            </div>
+            <p class="description">Genera la secuencia de Fibonacci hasta un límite.</p>
+            <div class="card-body">
+                <input type="number" id="fibonacci-limite" placeholder="Límite de la secuencia">
+                <button class="action-btn" data-exercise="fibonacci">Generar</button>
+                <div class="result-box" id="fibonacci-resultado"></div>
+            </div>
+            <div class="card-footer">
+                <button class="solution-btn" data-exercise="fibonacci">Ver Solución</button>
+            </div>
+        </article>
+
+        <!-- 🟩 Card 3: Cálculo de IMC (Ancho Medio) -->
+        <article class="card card-half-width" id="card-imc">
+            <div class="card-header">
+                 <span class="card-icon">⚖️</span>
+                <h2>Calculadora de IMC</h2>
+            </div>
+            <p class="description">Calcula tu Índice de Masa Corporal (IMC).</p>
+            <div class="card-body">
+                <div class="input-group">
+                    <input type="number" id="imc-peso" placeholder="Peso (libras)">
+                    <input type="number" id="imc-altura" placeholder="Altura (metros)">
+                </div>
+                <button class="action-btn" data-exercise="imc">Calcular</button>
+                <div class="result-box" id="imc-resultado"></div>
+            </div>
+             <div class="card-footer">
+                <button class="solution-btn" data-exercise="imc">Ver Fórmula</button>
+            </div>
+        </article>
+        
+        <!-- 🟥 Card 4: Palabra Palíndroma (Ancho Completo) -->
+        <article class="card card-full-width" id="card-palindromo">
+            <div class="card-header">
+                <span class="card-icon">🔄</span>
+                <h2>Verificador de Palíndromos</h2>
+            </div>
+            <p class="description">Comprueba si una palabra o frase es un palíndromo.</p>
+            <div class="card-body">
+                <input type="text" id="palindromo-texto" placeholder="Ingresa una palabra o frase...">
+                <button class="action-btn" data-exercise="palindromo">Verificar</button>
+                <div class="result-box" id="palindromo-resultado"></div>
+            </div>
+            <div class="card-footer">
+                <button class="solution-btn" data-exercise="palindromo">Ver Lógica de la Solución</button>
+            </div>
+        </article>
+    </main>
+
+    <!-- Ventana Modal (Oculta por defecto) -->
+    <div id="modal-overlay" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close-btn" id="modal-close">×</button>
+            <h2 id="modal-title">Título de la Solución</h2>
+            <div class="modal-body">
+                <h3>Implementación en Código</h3>
+                <pre><code id="modal-code"></code></pre>
+                <h3>Explicación Detallada</h3>
+                <div id="modal-explanation"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>🤖 Materia: Inteligencia Artificial | Sección 710 | Proyecto generado con prompt personalizado por Juancito Peña Vizcaíno</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
